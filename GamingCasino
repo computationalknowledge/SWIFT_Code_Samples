@@ -8,7 +8,7 @@ var playerAge = 25;
 print("What is your name?");
 print(player, " I see. That is quite the boring name");
 print("How old are you?");
-print(player, " Guess a number. If you guess higher than my number, you will win! Isn't that easy?");
+print(player, " Guess a number. If you guess higher than my number, you will win a Fabulous Prize! Isn't that easy?");
 var keepGoing=true;
 
 while keepGoing  {
