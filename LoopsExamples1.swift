@@ -9,7 +9,7 @@ for count in 1...3 {
 */
 
 var keepPlaying = true;
-print ("sample while loop")
+
 var i=1
 
 playerAccount=500;
