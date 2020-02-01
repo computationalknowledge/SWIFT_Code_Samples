@@ -1,0 +1,19 @@
+Functions with Multiple Return Values
+You can use a tuple type as the return type for a function to return multiple values as part of one compound return value.
+
+The example below defines a function called minMax(array:), which finds the smallest and largest numbers in an array of Int values:
+
+Question: How will you call/invoke this function?
+
+func minMax(array: [Int]) -> (min: Int, max: Int) {
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for value in array[1..<array.count] {
+        if value < currentMin {
+            currentMin = value
+        } else if value > currentMax {
+            currentMax = value
+        }
+    }
+    return (currentMin, currentMax)
+}
