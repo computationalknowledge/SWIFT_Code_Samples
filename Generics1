@@ -1,3 +1,5 @@
+/* Learning Outcome: create types which hold pairs of different values */
+
 class Pokemon
 {
     var strength:Int        = 0
@@ -24,3 +26,22 @@ struct FloatPair {
     var first: Float
     var second: Float
 }
+
+// Are you getting Bored yet?
+// Wouldn't it be better to have just one type which can work with any value? How about this:
+
+struct Pair<T1, T2> {
+    var first: T1
+    var second: T2
+}
+
+/*We arrived at a generic solution which can be used with any type.
+Instead of providing the concrete types of the properties in the structure, we use placeholders: T1 and T2.
+We can simply call our struct Pair because we don’t have to specify the supported types in the name of our structure.
+Now we can write: */
+
+let floatFloatPair = Pair<Float, Float>(first: 0.3, second: 0.5)
+print(floatFloatPair)
+// Pair<Float, Float>(first: 0.300000012, second: 0.5)
+
+
