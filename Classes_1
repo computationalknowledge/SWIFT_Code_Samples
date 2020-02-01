@@ -1,0 +1,18 @@
+class Pizza
+{
+    var size:Int        = 5
+    var thickness:Int   = 2
+    var type:String     = ""
+}
+
+var pizza:Pizza = Pizza()
+pizza.type = "Pepperoni"
+
+print("Made a \(pizza.type) pizza with size \(pizza.size)")
+
+class Customer {
+    var name:String        = "Joe"
+    var numberOfPizzasOrdered:Int   = 3
+    var type:String     =
+
+}
