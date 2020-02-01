@@ -1,0 +1,26 @@
+class Pokemon
+{
+    var strength:Int        = 0
+    var pokemonType:String   = ""
+    var pokemonName:String   = ""
+}
+
+struct StringPair {
+    var first: String
+    var second: String
+}
+ 
+struct IntPair {
+    var first: Int
+    var second: Int
+}
+
+struct DataPair {
+    var first: Pokemon
+    var second: Pokemon
+}
+ 
+struct FloatPair {
+    var first: Float
+    var second: Float
+}
