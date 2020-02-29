@@ -1,0 +1,86 @@
+//
+//  ViewController.swift
+//  SwitchPractice
+//
+//  Created by Parrot on 2020-02-24.
+//  Copyright © 2020 Parrot. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    // --------------------
+    // MARK: Outlets
+    // --------------------
+    
+    // @TODO: Put your outlets here
+    //  - outlets for your switches
+    //  - outlets for your results label
+    
+    @IBOutlet weak var DataButton: UISwitch!
+    @IBOutlet weak var PHONEBUTTON: UISwitch!
+    
+    @IBAction func TURNONAPMODEBTN(_ sender: UIButton) {
+        if DataButton.isOn {
+            DataButton.isOn = false
+        }
+        else{
+            DataButton.isOn = true
+            
+        }
+    }
+    
+    @IBAction func TURNOFFAPMODEBTN(_ sender: UIButton) {
+        if PHONEBUTTON.isOn {
+            PHONEBUTTON.isOn = false;
+        }
+        else{
+            DataButton.isOn = true
+            PHONEBUTTON.isOn = false
+        }
+        if DataButton.isOn {
+            DataButton.isOn = false
+        }
+        else{
+            DataButton.isOn = true
+            PHONEBUTTON.isOn = false
+        }
+    }
+    
+    // --------------------
+    // MARK: Default functions
+    // --------------------
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    // --------------------
+    // MARK: Actions
+    // --------------------
+
+    // @TODO: Put your actions here
+    
+    // 1. Action for "Turn Airplane Mode ON" button
+    // - Turn both Wifi and Phone Calls switches into the "off" position
+    
+    // 2. Action for "Turn Airplane Mode OFF" button
+    // - Turn the Wifi and Phone Calls switches into the "on" position
+    
+    // 3. Action for when Wifi switch changes
+    // - update results label to show that Wifi is a service that is "on"
+    
+    
+    // 4. Action for when Phone Calls switch changes
+    // - update results label to show that Wifi is a service tht is "on"
+    
+    
+    
+}
+
