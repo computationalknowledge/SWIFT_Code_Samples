@@ -1,0 +1,95 @@
+//
+//  ViewController.swift
+//  SwitchPractice
+//
+//  Created by Parrot on 2020-02-24.
+//  Modifed by The Viking Coder.
+// Under GNU
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    // --------------------
+    // MARK: Outlets
+    // --------------------
+    
+    // @TODO: Put your outlets here
+    //  - outlets for your switches
+    //  - outlets for your results label
+    
+    @IBAction func DataSWITCHIBO(_ sender: UISwitch) {
+        if sender.isOn{
+            DataStatusLabel.text = "Data is ON!"
+        }
+        else {
+            DataStatusLabel.text = "Data is OFF!"
+        }
+    }
+    
+    @IBOutlet weak var DataSwitchIBOOutlet: UISwitch!
+    @IBOutlet weak var PHONESWITCHibOUTLET: UISwitch!
+    
+    // this was created by dragging from the connections panel:
+    @IBOutlet weak var Data2: UISwitch!
+    @IBOutlet weak var IMG1: UIImageView!
+    // Phone Switch is an ACTION
+    @IBAction func PHONESwitch(_ sender: UISwitch) {
+        if sender.isOn{
+            PhoneStatusLabel.text = "PHONE is ON!"
+        }
+        else {
+            PhoneStatusLabel.text = "Phone is OFF!"
+        }    }
+    
+    @IBOutlet weak var DataStatusLabel: UILabel!
+    @IBOutlet weak var PhoneStatusLabel: UILabel!
+    
+    // --------------------
+    // MARK: Default functions
+    // --------------------
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    // --------------------
+    // MARK: Actions
+    // --------------------
+
+    // @TODO: Put your actions here
+    
+    // 1. Action for "Turn Airplane Mode ON" button
+    // - Turn both Wifi and Phone Calls switches into the "off" position
+    
+    @IBAction func TURNONAPMODE(_ sender: UIButton) {
+        PhoneStatusLabel.text = "PHONE is OFF!"
+        DataStatusLabel.text = "Data is OFF!"
+        DataSwitchIBOOutlet.isOn=faalse;
+        PHONESWITCHibOUTLET.isOn=false;
+    }
+    @IBAction func TURNOFFAPMODE(_ sender: UIButton) {
+        PhoneStatusLabel.text = "PHONE is ON"
+        DataStatusLabel.text = "Data is ON"
+        DataSwitchIBOOutlet.isOn=true;
+        PHONESWITCHibOUTLET.isOn=true;    }
+    // 2. Action for "Turn Airplane Mode OFF" button
+    // - Turn the Wifi and Phone Calls switches into the "on" position
+    
+    // 3. Action for when Wifi switch changes
+    // - update results label to show that Wifi is a service that is "on"
+    
+    
+    // 4. Action for when Phone Calls switch changes
+    // - update results label to show that Wifi is a service tht is "on"
+    
+    
+    
+}
+
